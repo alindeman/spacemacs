@@ -42,7 +42,7 @@
 
 (defun go/init-go-mode()
   (when (memq window-system '(mac ns x))
-    (dolist (var '("GOPATH" "GO15VENDOREXPERIMENT"))
+    (dolist (var '("GOPATH" "GOROOT" "GO15VENDOREXPERIMENT"))
       (unless (getenv var)
         (exec-path-from-shell-copy-env var))))
 
